@@ -2,14 +2,20 @@ package com.saunders2;
 
 import java.io.*;
 
-/**
- * Created by mgreen14 on 12/27/17.
+/** Defines the attributes and behavior of the FileOutput object
+ * @author mgreen14
+ * @author asaunders2
+ * @version 1.2, 9/2/2018
  */
 public class FileOutput {
 
     Writer out = null;
     private String fileName;
 
+    /**
+     *
+     * @param fileName is a string showing the file name to be used when opening a file
+     */
     public FileOutput(String fileName) {
         this.fileName = fileName;
         try {
@@ -20,6 +26,10 @@ public class FileOutput {
         }
     }
 
+    /**
+     *
+     * @param line is a string represents one line of a file
+     */
     public void fileWrite(String line) {
         try {
             out.write(line+"\n");
@@ -29,6 +39,9 @@ public class FileOutput {
         }
     }
 
+    /**
+     * closes the file
+     */
     public void fileClose() {
         if (out != null) {
             try {
