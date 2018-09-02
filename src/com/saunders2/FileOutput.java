@@ -13,8 +13,8 @@ public class FileOutput {
     private String fileName;
 
     /**
-     *
-     * @param fileName is a string showing the file name to be used when opening a file
+     * Constructs a new FileInput with a fileName passed in as a parameter
+     * @param fileName the string showing the file name to be used
      */
     public FileOutput(String fileName) {
         this.fileName = fileName;
@@ -27,7 +27,7 @@ public class FileOutput {
     }
 
     /**
-     *
+     * Displays the information in the file being used
      * @param line is a string represents one line of a file
      */
     public void fileWrite(String line) {
@@ -40,7 +40,8 @@ public class FileOutput {
     }
 
     /**
-     * closes the file
+     * Closes the file when there is nothing else to write from it
+     * @throws IOException general exception for bad input or output
      */
     public void fileClose() {
         if (out != null) {

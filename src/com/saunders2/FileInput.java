@@ -18,7 +18,7 @@ public class FileInput {
 
     /**
      * Constructs a new FileInput with a fileName passed in as a parameter
-     * @param  fileName              string that holds the name of the file to be opened
+     * @param  fileName              the string that holds the name of the file to be opened
      * @throws FileNotFoundException if the file was not found an error will be displayed
      */
     public FileInput(String fileName) {
