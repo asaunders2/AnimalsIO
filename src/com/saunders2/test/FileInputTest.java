@@ -7,36 +7,40 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 import static org.junit.Assert.*;
 
+/**Tests the fileInput class to see if the file can be read
+ * @author asaunders2
+ * @version 1.1, 9/2/2018
+ */
+
 public class FileInputTest extends TestCase {
 
-    BufferedReader bReader = null;
-    String line;
-
-    FileReader fReader;
+    FileInput fInput;
 
     @Before
-    public void testSetUp() throws Exception {
-        
-        try {
-            fReader = new FileReader("animalsIO.txt");
-            bReader = new BufferedReader(fReader);
+    public void setUp() throws Exception {
 
-            while((line = bReader.readLine()) != null){
-                System.out.println(line);
-            }
+        fInput = new FileInput("animalsIO.txt");
 
-        } catch (java.io.IOException e) {
-            e.printStackTrace();
-        }
     }
 
     @After
     public void tearDown() throws Exception {
     }
 
+    @Test
+    public void testFileReadLine() {
+        assertNotNull(fInput.fileReadLine());
+        assertNotNull(fInput.fileReadLine());
+        assertNotNull(fInput.fileReadLine());
+        assertNull(fInput.fileReadLine());
+    }
+
+    @Test
+    public void fileClose() {
+        fInput.fileClose();
+    }
 }
