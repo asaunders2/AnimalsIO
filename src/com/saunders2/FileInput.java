@@ -5,9 +5,12 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-/**
- * Created by mgreen14 on 12/27/17.
+/** Defines the attributes and behavior of the Dog object
+ * @author mgreen14
+ * @author asaunders2
+ * @version 1.2, 9/2/2018
  */
+
 public class FileInput {
 
     private BufferedReader in = null;
