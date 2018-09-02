@@ -11,6 +11,11 @@ import java.io.FileReader;
 
 import static org.junit.Assert.*;
 
+/**Tests the fileInput class to see if the file can be read
+ * @author asaunders2
+ * @version 1.1, 9/2/2018
+ */
+
 public class FileInputTest extends TestCase {
 
     FileInput fInput;
